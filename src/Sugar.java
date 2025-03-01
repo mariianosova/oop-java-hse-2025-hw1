@@ -1,18 +1,3 @@
-/**
- * Класс Sugar
- *
- * Поля (примерная идея):
- *   - private String sugarLevel; // Например: "Без сахара", "Мало сахара", "Много сахара"
- *   - private double sugarPrice; // надбавка к цене (может быть 0 для "Без сахара", 10.0 для "Много" и т.д.)
- *
- * Геттеры/сеттеры:
- *   - getSugarLevel(), setSugarLevel(...)
- *   - getSugarPrice(), setSugarPrice(...)
- *
- * Методы (примерные идеи):
- *   - getSugarDescription(): String
- *       (может возвращать что-то вроде: "Добавлен сахар: <уровень>")
- */
 public class Sugar {
     private String sugarLevel;
     private double sugarPrice;
