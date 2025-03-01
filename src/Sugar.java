@@ -8,16 +8,17 @@ public class Sugar {
     }
 
     private double determinePrice(String sugarLevel) {
-        if (sugarLevel.equals("Без сахара")) {
-            return 0.0;
-        } else if (sugarLevel.equals("Мало сахара")) {
-            return 5.0;
-        } else if (sugarLevel.equals("Среднее количество сахара")) {
-            return 10.0;
-        } else if (sugarLevel.equals("Много сахара")) {
-            return 15.0;
-        } else {
-            return 0.0;
+        switch (sugarLevel) {
+            case "Без сахара":
+                return 0.0;
+            case "Мало сахара":
+                return 5.0;
+            case "Среднее количество сахара":
+                return 10.0;
+            case "Много сахара":
+                return 15.0;
+            default:
+                return 0.0;
         }
     }
 
