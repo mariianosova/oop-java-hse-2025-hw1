@@ -14,14 +14,50 @@
  *       (может возвращать что-то вроде: "Добавлен сахар: <уровень>")
  */
 public class Sugar {
-    // Напишите код здесь (объявление полей)
+    private String sugarLevel;
+    private double sugarPrice;
 
-    // Напишите код здесь (конструкторы)
+    public Sugar(String sugarLevel) {
+        this.sugarLevel = sugarLevel;
+        this.sugarPrice = determinePrice(sugarLevel);
+    }
 
-    // Напишите код здесь (геттеры/сеттеры)
+    private double determinePrice(String sugarLevel) {
+        if (sugarLevel.equals("Без сахара")) {
+            return 0.0;
+        } else if (sugarLevel.equals("Мало сахара")) {
+            return 5.0;
+        } else if (sugarLevel.equals("Среднее количество сахара")) {
+            return 10.0;
+        } else if (sugarLevel.equals("Много сахара")) {
+            return 15.0;
+        } else {
+            return 0.0;
+        }
+    }
 
-    // public String getSugarDescription() {
-    //     // Напишите код здесь, возвращая текстовое описание уровня сахара
-    //     // Например: return "Уровень сахара: " + sugarLevel;
-    // }
+    public String getSugarLevel() {
+        return sugarLevel;
+    }
+
+    public void setSugarLevel(String sugarLevel) {
+        this.sugarLevel = sugarLevel;
+        this.sugarPrice = determinePrice(sugarLevel);
+    }
+
+    public double getSugarPrice() {
+        return sugarPrice;
+    }
+
+    public void setSugarPrice(double sugarPrice) {
+        this.sugarPrice = sugarPrice;
+    }
+
+    public String getSugarDescription() {
+        return "Уровень сахара: " + sugarLevel;
+    }
+
+    public String toString() {
+        return "Уровень сахара: " + sugarLevel + " (+" + sugarPrice + " руб.)";
+    }
 }
